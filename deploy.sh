@@ -17,7 +17,8 @@ git commit -m "Carreau landing page with AdSense verification" 2>/dev/null || ec
 # Add remote if not exists
 if ! git remote | grep -q origin; then
     echo "🔗 Adding GitHub remote..."
-    git remote add origin https://github.com/patwii/carreau-root.git
+    # Use SSH instead of HTTPS
+    git remote add origin git@github.com:patwii/carreau-root.git
 fi
 
 # Push
